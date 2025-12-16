@@ -21,7 +21,7 @@ export function MotivationSection({ profile }: MotivationSectionProps) {
           <Heart className="w-5 h-5 text-secondary" />
         </div>
         <h3 className="text-lg font-display font-bold text-foreground">
-          Tu Mensaje Personalizado
+          Tu mensaje personalizado
         </h3>
       </div>
 

@@ -28,9 +28,9 @@ export const questions: Question[] = [
     type: "radio",
     options: [
       { id: "1a", text: "Casi nada, estoy empezando desde cero", value: 0 },
-      { id: "1b", text: "He escuchado sobre ChatGPT pero no lo uso regularmente", value: 1 },
-      { id: "1c", text: "Uso ChatGPT ocasionalmente para algunas tareas", value: 2 },
-      { id: "1d", text: "Uso ChatGPT + otras herramientas de IA con frecuencia", value: 3 },
+      { id: "1b", text: "He escuchado sobre ChatGPT, Gemini o similar pero no lo uso regularmente", value: 1 },
+      { id: "1c", text: "Uso ChatGPT, Gemini o similar ocasionalmente para algunas tareas", value: 2 },
+      { id: "1d", text: "Uso ChatGPT, Gemini o similar + otras herramientas de IA con frecuencia", value: 3 },
       { id: "1e", text: "He implementado automatizaciones o asistentes de IA", value: 4 },
     ],
   },
@@ -42,7 +42,7 @@ export const questions: Question[] = [
     type: "checkbox",
     minSelections: 0,
     options: [
-      { id: "2a", text: "ChatGPT / Claude", value: "chatgpt" },
+      { id: "2a", text: "ChatGPT / Claude / Gemini", value: "chatgpt" },
       { id: "2b", text: "Midjourney / DALL-E / Stable Diffusion", value: "imagen" },
       { id: "2c", text: "Notion AI", value: "notion" },
       { id: "2d", text: "Jasper / Copy.ai", value: "copywriting" },
@@ -108,7 +108,7 @@ export const questions: Question[] = [
       { id: "6d", text: "Diferenciarme en mi industria", value: "diferenciacion" },
       { id: "6e", text: "Reducir costos de operación", value: "costos" },
       { id: "6f", text: "Escalar mi negocio sin contratar más", value: "escalabilidad" },
-      { id: "6g", text: "Cambiar de carrera a roles más tech", value: "carrera" },
+      { id: "6g", text: "Cambiar de carrera a roles más tecnológicos", value: "carrera" },
     ],
   },
   // QUESTION 7: Timeline for Results
@@ -134,7 +134,7 @@ export const questions: Question[] = [
       { id: "8a", text: "1-2 horas/semana (muy poco tiempo)", value: 1.5 },
       { id: "8b", text: "3-5 horas/semana (dedicación moderada)", value: 4 },
       { id: "8c", text: "6-10 horas/semana (dedicación alta)", value: 8 },
-      { id: "8d", text: "10+ horas/semana (full focus)", value: 12 },
+      { id: "8d", text: "10+ horas/semana (full foco)", value: 12 },
     ],
   },
   // QUESTION 9: Learning Style

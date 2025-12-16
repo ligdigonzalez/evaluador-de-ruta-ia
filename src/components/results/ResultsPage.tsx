@@ -34,14 +34,14 @@ export function ResultsPage({ profile, roadmap, userName }: ResultsPageProps) {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border mb-6">
               <Youtube className="w-4 h-4 text-destructive" />
               <span className="text-sm text-muted-foreground">
-                Únete a más de <strong className="text-foreground">72,000</strong> personas aprendiendo IA
+                Únete a más de <strong className="text-foreground">+73.000</strong> personas aprendiendo IA
               </span>
             </div>
 
             {/* Level display */}
             <div className="mb-6">
               <p className="text-sm text-muted-foreground uppercase tracking-wide mb-3">
-                🎯 Tu Nivel de IA
+                🎯 Tu nivel de IA
               </p>
               <LevelBadge level={profile.level} />
             </div>
@@ -49,7 +49,7 @@ export function ResultsPage({ profile, roadmap, userName }: ResultsPageProps) {
             {/* Profile name */}
             <div className="mb-4">
               <p className="text-sm text-muted-foreground uppercase tracking-wide mb-1">
-                Tu Perfil
+                Tu perfil
               </p>
               <h1 className="text-2xl md:text-3xl font-display font-bold text-foreground">
                 {roadmap.profileName}
@@ -80,7 +80,7 @@ export function ResultsPage({ profile, roadmap, userName }: ResultsPageProps) {
         <section className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
           <div className="flex items-center gap-3 mb-6">
             <h2 className="text-xl md:text-2xl font-display font-bold text-foreground">
-              📍 Tu Roadmap Personalizado en 3 Fases
+              📍 Tu roadmap personalizado en 3 fases
             </h2>
           </div>
 
