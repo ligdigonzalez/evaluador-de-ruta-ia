@@ -6,6 +6,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { countries } from "@/data/countries";
 import { Mail, User, Lock, ArrowRight, CheckCircle2, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
@@ -158,23 +166,32 @@ export function EmailCapture({ onSubmit }: EmailCaptureProps) {
               País *
             </Label>
             <div className="relative">
-              <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-              <Input
-                id="country"
-                type="text"
-                placeholder="¿Desde qué país nos escribes?"
+              <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground z-10" />
+              <Select
                 value={country}
-                onChange={(e) => {
-                  setCountry(e.target.value);
+                onValueChange={(value) => {
+                  setCountry(value);
                   if (errors.country) setErrors((prev) => ({ ...prev, country: undefined }));
                 }}
-                className={cn(
-                  "pl-10 h-12",
-                  errors.country && "border-destructive focus-visible:ring-destructive"
-                )}
-                required
-                aria-describedby={errors.country ? "country-error" : undefined}
-              />
+              >
+                <SelectTrigger
+                  id="country"
+                  className={cn(
+                    "pl-10 h-12",
+                    errors.country && "border-destructive focus-visible:ring-destructive"
+                  )}
+                  aria-describedby={errors.country ? "country-error" : undefined}
+                >
+                  <SelectValue placeholder="Selecciona tu país" />
+                </SelectTrigger>
+                <SelectContent className="max-h-[320px]">
+                  {countries.map((c) => (
+                    <SelectItem key={c} value={c}>
+                      {c}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
             {errors.country && (
               <p id="country-error" className="text-sm text-destructive">

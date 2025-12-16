@@ -65,7 +65,7 @@ export const roadmaps: Record<string, Roadmap> = {
     phases: [
       {
         number: 1,
-        title: "Fundamentos de IA para Creación de Contenido",
+        title: "Fundamentos de IA para creación de contenido",
         duration: "Semanas 1-2",
         objective: "Dominar ChatGPT/Claude para crear contenido 3x más rápido",
         skills: [
@@ -84,7 +84,7 @@ export const roadmaps: Record<string, Roadmap> = {
       },
       {
         number: 2,
-        title: "Asistentes de IA Personalizados para Tu Contenido",
+        title: "Asistentes de IA personalizados para tu contenido",
         duration: "Semanas 3-4",
         objective: "Crear asistentes especializados que escriban en tu voz y estilo",
         skills: [
@@ -103,7 +103,7 @@ export const roadmaps: Record<string, Roadmap> = {
       },
       {
         number: 3,
-        title: "Automatización Completa de Contenido",
+        title: "Automatización completa de contenido",
         duration: "Mes 2-3",
         objective: "Sistema automatizado que genera y programa contenido con mínima intervención",
         skills: [
@@ -127,7 +127,7 @@ export const roadmaps: Record<string, Roadmap> = {
       action: "Después de ver el video, abre ChatGPT y crea tu primer post de LinkedIn usando IA. Tómate 30 minutos para experimentar.",
     },
     recommendedCourse: {
-      name: "Asistentes de IA para Freelancers",
+      name: "Asistentes de IA para freelancers",
       duration: "6 semanas",
       launchDate: "2026",
       description: "Aprenderás a crear: asistente de newsletters, escritor de guiones, generador de propuestas, estratega de Instagram, y flujo completo automatizado.",
@@ -142,7 +142,7 @@ export const roadmaps: Record<string, Roadmap> = {
     phases: [
       {
         number: 1,
-        title: "Fundamentos de Asistentes Conversacionales",
+        title: "Fundamentos de asistentes conversacionales",
         duration: "Semanas 1-2",
         objective: "Entender cómo funcionan los asistentes de IA y diseñar tu estrategia",
         skills: [
@@ -161,7 +161,7 @@ export const roadmaps: Record<string, Roadmap> = {
       },
       {
         number: 2,
-        title: "Construyendo Tu Primer Asistente de Atención",
+        title: "Construyendo tu primer asistente de atención",
         duration: "Semanas 3-5",
         objective: "Crear chatbot funcional que responda preguntas frecuentes de forma natural",
         skills: [
@@ -179,7 +179,7 @@ export const roadmaps: Record<string, Roadmap> = {
       },
       {
         number: 3,
-        title: "Integración y Escalabilidad",
+        title: "Integración y escalabilidad",
         duration: "Mes 2-3",
         objective: "Asistente integrado con WhatsApp/Email/Web respondiendo clientes reales",
         skills: [
@@ -202,7 +202,7 @@ export const roadmaps: Record<string, Roadmap> = {
       action: "Después del video, abre un documento y escribe las 10 preguntas más frecuentes que recibes de clientes. Este será el fundamento de tu asistente.",
     },
     recommendedCourse: {
-      name: "Tu Primer Asistente de Atención al Cliente con IA",
+      name: "Tu primer asistente de atención al cliente con IA",
       duration: "6 semanas",
       launchDate: "2026",
       description: "Sistema completo: desde diseño de flujo hasta asistente funcional integrado con WhatsApp/Email/Web.",
@@ -217,7 +217,7 @@ export const roadmaps: Record<string, Roadmap> = {
     phases: [
       {
         number: 1,
-        title: "Optimización Diaria con IA",
+        title: "Optimización diaria con IA",
         duration: "Semanas 1-2",
         objective: "Integrar IA en tu flujo de trabajo diario para ser 2x más productivo",
         skills: [
@@ -236,7 +236,7 @@ export const roadmaps: Record<string, Roadmap> = {
       },
       {
         number: 2,
-        title: "Documentación Profesional con IA",
+        title: "Documentación profesional con IA",
         duration: "Semanas 3-5",
         objective: "Crear documentos, reportes y presentaciones profesionales en la mitad del tiempo",
         skills: [
@@ -255,7 +255,7 @@ export const roadmaps: Record<string, Roadmap> = {
       },
       {
         number: 3,
-        title: "Propuesta de Valor: IA en Tu Empresa",
+        title: "Propuesta de valor: IA en tu empresa",
         duration: "Mes 2-3",
         objective: "Presentar caso de negocio de IA a tu jefe/equipo con ROI calculado",
         skills: [
@@ -278,7 +278,7 @@ export const roadmaps: Record<string, Roadmap> = {
       action: "Identifica 3 tareas repetitivas en tu trabajo de esta semana. Escríbelas y estima cuántas horas por semana gastas en cada una.",
     },
     recommendedCourse: {
-      name: "IA Práctica para Destacar en Tu Trabajo",
+      name: "IA práctica para destacar en tu trabajo",
       duration: "4-6 semanas",
       launchDate: "2026",
       description: "Portfolio completo de casos de uso aplicados, automatizaciones documentadas, y propuesta de valor para presentar a tu empresa.",
@@ -293,7 +293,7 @@ export const roadmaps: Record<string, Roadmap> = {
     phases: [
       {
         number: 1,
-        title: "Exploración Completa de IA (100% Gratis)",
+        title: "Exploración completa de IA (100% gratis)",
         duration: "Semanas 1-3",
         objective: "Entender qué es IA, qué puedes hacer, y dónde enfocarte según tus intereses",
         skills: [
@@ -313,7 +313,7 @@ export const roadmaps: Record<string, Roadmap> = {
       },
       {
         number: 2,
-        title: "Aplicación Práctica - Construyendo Portfolio",
+        title: "Aplicación práctica - construyendo portfolio",
         duration: "Semanas 4-8",
         objective: "Crear 3-5 proyectos prácticos de IA que puedas mostrar en CV o entrevistas",
         skills: [
@@ -332,7 +332,7 @@ export const roadmaps: Record<string, Roadmap> = {
       },
       {
         number: 3,
-        title: "Especialización y Profundización",
+        title: "Especialización y profundización",
         duration: "Mes 3-4",
         objective: "Elegir 1-2 áreas de IA para profundizar y considerarte 'competente'",
         skills: [
@@ -356,7 +356,7 @@ export const roadmaps: Record<string, Roadmap> = {
       action: "Crea cuenta gratuita de ChatGPT (si no la tienes). Después del video, experimenta 30 minutos con 3 casos de uso que te interesen.",
     },
     recommendedCourse: {
-      name: "Comunidad AprendeIA - Membresía Mensual",
+      name: "Comunidad AprendeIA - membresía mensual",
       duration: "Ongoing",
       launchDate: "2026",
       description: "Tutorial nuevo cada mes, Q&A en vivo con Ligdi, comunidad de práctica, biblioteca de recursos, descuento 20% en cursos completos. Inversión: ~$29-49/mes.",
@@ -372,7 +372,7 @@ export const defaultRoadmap: Roadmap = {
   phases: [
     {
       number: 1,
-      title: "Fundamentos de IA Práctica",
+      title: "Fundamentos de IA práctica",
       duration: "Semanas 1-2",
       objective: "Dominar las bases de ChatGPT y otras herramientas de IA para uso diario",
       skills: [
@@ -391,7 +391,7 @@ export const defaultRoadmap: Roadmap = {
     },
     {
       number: 2,
-      title: "Asistentes Personalizados",
+      title: "Asistentes personalizados",
       duration: "Semanas 3-4",
       objective: "Crear asistentes de IA que se adapten a tus necesidades específicas",
       skills: [
@@ -409,7 +409,7 @@ export const defaultRoadmap: Roadmap = {
     },
     {
       number: 3,
-      title: "Automatización y Escalabilidad",
+      title: "Automatización y escalabilidad",
       duration: "Mes 2-3",
       objective: "Conectar herramientas y crear sistemas que trabajen para ti",
       skills: [
@@ -432,7 +432,7 @@ export const defaultRoadmap: Roadmap = {
     action: "Después del video, experimenta 30 minutos con ChatGPT aplicándolo a una tarea real de tu trabajo.",
   },
   recommendedCourse: {
-    name: "Curso Integral de IA Práctica",
+    name: "Curso integral de IA práctica",
     duration: "6 semanas",
     launchDate: "2026",
     description: "Programa completo que te llevará de principiante a usuario avanzado con proyectos prácticos y mentoría.",

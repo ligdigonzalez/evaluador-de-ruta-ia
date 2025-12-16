@@ -298,7 +298,7 @@ export default function Assessment() {
               <QuestionCard
                 key={questions[currentQuestion - 1].id}
                 question={questions[currentQuestion - 1]}
-                selectedAnswer={answers[questions[currentQuestion - 1].id] || null}
+                selectedAnswer={answers[questions[currentQuestion - 1].id] ?? null}
                 onAnswer={handleAnswer}
               />
             </div>
