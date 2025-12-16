@@ -38,7 +38,7 @@ export function FirstStepCard({ firstStep }: FirstStepCardProps) {
 
           <div className="flex-1 min-w-0">
             <p className="text-xs text-muted-foreground uppercase tracking-wide mb-1">
-              📺 Video Recomendado
+              📺 Video recomendado
             </p>
             <h4 className="font-semibold text-foreground leading-snug mb-2">
               {firstStep.video}
@@ -54,7 +54,7 @@ export function FirstStepCard({ firstStep }: FirstStepCardProps) {
       {/* Action description */}
       <div className="mb-6">
         <p className="text-sm font-semibold text-foreground uppercase tracking-wide mb-2">
-          ⚡ Acción Inmediata:
+          ⚡ Acción inmediata:
         </p>
         <p className="text-foreground/80 leading-relaxed">
           {firstStep.action}

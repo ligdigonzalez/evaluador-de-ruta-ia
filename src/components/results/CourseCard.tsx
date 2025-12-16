@@ -20,7 +20,7 @@ export function CourseCard({ course, profileName }: CourseCardProps) {
             <GraduationCap className="w-5 h-5" />
           </div>
           <span className="text-sm font-medium uppercase tracking-wide opacity-90">
-            Curso Recomendado Para Ti
+            Curso recomendado para ti
           </span>
         </div>
         <h3 className="text-xl md:text-2xl font-display font-bold">

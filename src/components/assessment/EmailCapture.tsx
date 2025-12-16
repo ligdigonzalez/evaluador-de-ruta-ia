@@ -1,25 +1,26 @@
 // Email capture form displayed after completing assessment
-// Collects email before showing full results
+// Collects email, name, and country before showing full results
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Mail, User, Lock, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Mail, User, Lock, ArrowRight, CheckCircle2, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 
 interface EmailCaptureProps {
-  onSubmit: (email: string, name: string) => void;
+  onSubmit: (email: string, name: string, country: string) => void;
 }
 
 export function EmailCapture({ onSubmit }: EmailCaptureProps) {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
+  const [country, setCountry] = useState("");
   const [consent, setConsent] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [error, setError] = useState("");
+  const [errors, setErrors] = useState<{ email?: string; name?: string; country?: string }>({});
 
   // Validate email format
   const validateEmail = (email: string): boolean => {
@@ -29,25 +30,36 @@ export function EmailCapture({ onSubmit }: EmailCaptureProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError("");
+    const newErrors: { email?: string; name?: string; country?: string } = {};
 
-    // Validate email
+    // Validate all fields
     if (!email.trim()) {
-      setError("Por favor ingresa tu email");
-      return;
+      newErrors.email = "Por favor ingresa tu email";
+    } else if (!validateEmail(email)) {
+      newErrors.email = "Por favor ingresa un email válido";
     }
-    if (!validateEmail(email)) {
-      setError("Por favor ingresa un email válido");
+
+    if (!name.trim()) {
+      newErrors.name = "Por favor ingresa tu nombre";
+    }
+
+    if (!country.trim()) {
+      newErrors.country = "Por favor ingresa tu país";
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
       return;
     }
 
+    setErrors({});
     setIsSubmitting(true);
 
     // Simulate brief delay for UX
     await new Promise((resolve) => setTimeout(resolve, 500));
 
     // Call parent handler
-    onSubmit(email.trim(), name.trim());
+    onSubmit(email.trim(), name.trim(), country.trim());
     
     toast.success("¡Perfecto! Preparando tus resultados...");
     setIsSubmitting(false);
@@ -66,10 +78,13 @@ export function EmailCapture({ onSubmit }: EmailCaptureProps) {
         {/* Heading */}
         <div className="text-center mb-8">
           <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-2">
-            🎉 ¡Análisis Completo!
+            🎉 ¡Análisis completo!
           </h2>
           <p className="text-muted-foreground">
             Hemos creado tu roadmap personalizado de aprendizaje en IA.
+          </p>
+          <p className="text-muted-foreground mt-2 text-sm">
+            Completa tus datos para ver tus resultados y recibirlos por correo.
           </p>
         </div>
 
@@ -89,28 +104,27 @@ export function EmailCapture({ onSubmit }: EmailCaptureProps) {
                 value={email}
                 onChange={(e) => {
                   setEmail(e.target.value);
-                  setError("");
+                  if (errors.email) setErrors((prev) => ({ ...prev, email: undefined }));
                 }}
                 className={cn(
                   "pl-10 h-12",
-                  error && "border-destructive focus-visible:ring-destructive"
+                  errors.email && "border-destructive focus-visible:ring-destructive"
                 )}
                 required
-                aria-describedby={error ? "email-error" : undefined}
+                aria-describedby={errors.email ? "email-error" : undefined}
               />
             </div>
-            {error && (
+            {errors.email && (
               <p id="email-error" className="text-sm text-destructive">
-                {error}
+                {errors.email}
               </p>
             )}
           </div>
 
-          {/* Name field (optional) */}
+          {/* Name field (required) */}
           <div className="space-y-2">
             <Label htmlFor="name" className="text-sm font-medium">
-              Nombre{" "}
-              <span className="text-muted-foreground font-normal">(opcional)</span>
+              Nombre *
             </Label>
             <div className="relative">
               <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
@@ -119,13 +133,54 @@ export function EmailCapture({ onSubmit }: EmailCaptureProps) {
                 type="text"
                 placeholder="Tu nombre"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="pl-10 h-12"
+                onChange={(e) => {
+                  setName(e.target.value);
+                  if (errors.name) setErrors((prev) => ({ ...prev, name: undefined }));
+                }}
+                className={cn(
+                  "pl-10 h-12",
+                  errors.name && "border-destructive focus-visible:ring-destructive"
+                )}
+                required
+                aria-describedby={errors.name ? "name-error" : undefined}
               />
             </div>
-            <p className="text-xs text-muted-foreground">
-              Nos ayuda a personalizarte mejor
-            </p>
+            {errors.name && (
+              <p id="name-error" className="text-sm text-destructive">
+                {errors.name}
+              </p>
+            )}
+          </div>
+
+          {/* Country field */}
+          <div className="space-y-2">
+            <Label htmlFor="country" className="text-sm font-medium">
+              País *
+            </Label>
+            <div className="relative">
+              <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+              <Input
+                id="country"
+                type="text"
+                placeholder="¿Desde qué país nos escribes?"
+                value={country}
+                onChange={(e) => {
+                  setCountry(e.target.value);
+                  if (errors.country) setErrors((prev) => ({ ...prev, country: undefined }));
+                }}
+                className={cn(
+                  "pl-10 h-12",
+                  errors.country && "border-destructive focus-visible:ring-destructive"
+                )}
+                required
+                aria-describedby={errors.country ? "country-error" : undefined}
+              />
+            </div>
+            {errors.country && (
+              <p id="country-error" className="text-sm text-destructive">
+                {errors.country}
+              </p>
+            )}
           </div>
 
           {/* Consent checkbox */}
@@ -154,7 +209,7 @@ export function EmailCapture({ onSubmit }: EmailCaptureProps) {
               <span>Procesando...</span>
             ) : (
               <>
-                <span>Ver Mi Roadmap</span>
+                <span>Ver mi roadmap</span>
                 <ArrowRight className="w-5 h-5 ml-2" />
               </>
             )}

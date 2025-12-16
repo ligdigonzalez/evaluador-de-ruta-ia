@@ -60,7 +60,7 @@ export const roadmaps: Record<string, Roadmap> = {
   // PROFILE 1: Freelancer + Novato + Contenido
   "freelancer-contenido": {
     id: "freelancer-contenido",
-    profileName: "Freelancer Creador de Contenido",
+    profileName: "Freelancer creador de contenido",
     profileDescription: "Eres freelancer comenzando con IA y tu mayor desafío es crear contenido de calidad de forma más eficiente.",
     phases: [
       {
@@ -137,7 +137,7 @@ export const roadmaps: Record<string, Roadmap> = {
   // PROFILE 2: Emprendedor + Comunicación
   "emprendedor-comunicacion": {
     id: "emprendedor-comunicacion",
-    profileName: "Emprendedor con Foco en Atención al Cliente",
+    profileName: "Emprendedor con foco en atención al cliente",
     profileDescription: "Eres emprendedor con conocimiento básico de IA y necesitas automatizar la atención al cliente para escalar tu negocio.",
     phases: [
       {
@@ -212,7 +212,7 @@ export const roadmaps: Record<string, Roadmap> = {
   // PROFILE 3: Empleado + Productividad
   "empleado-productividad": {
     id: "empleado-productividad",
-    profileName: "Empleado Buscando Destacar",
+    profileName: "Empleado buscando destacar",
     profileDescription: "Trabajas en una empresa y ya usas IA ocasionalmente. Quieres destacar siendo más eficiente y proponer mejoras innovadoras.",
     phases: [
       {
@@ -288,7 +288,7 @@ export const roadmaps: Record<string, Roadmap> = {
   // PROFILE 4: Estudiante + Aprendizaje General
   "estudiante-general": {
     id: "estudiante-general",
-    profileName: "Estudiante en Transición",
+    profileName: "Estudiante en transición",
     profileDescription: "Eres estudiante o estás en transición de carrera. Quieres dominar IA para diferenciarte profesionalmente, pero tienes presupuesto limitado.",
     phases: [
       {
@@ -367,7 +367,7 @@ export const roadmaps: Record<string, Roadmap> = {
 // Default/fallback roadmap for combinations not explicitly defined
 export const defaultRoadmap: Roadmap = {
   id: "default",
-  profileName: "Profesional en Aprendizaje de IA",
+  profileName: "Profesional en aprendizaje de IA",
   profileDescription: "Basado en tus respuestas, hemos creado un roadmap personalizado para ayudarte a dominar las herramientas de IA más relevantes para tu situación.",
   phases: [
     {

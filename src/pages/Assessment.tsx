@@ -37,9 +37,10 @@ export default function Assessment() {
   // Matched roadmap
   const [roadmap, setRoadmap] = useState<Roadmap | null>(null);
 
-  // User email and name
+  // User email, name, and country
   const [userEmail, setUserEmail] = useState("");
   const [userName, setUserName] = useState("");
+  const [userCountry, setUserCountry] = useState("");
 
   // Load saved progress from localStorage on mount
   useEffect(() => {
@@ -91,7 +92,8 @@ export default function Assessment() {
     const question = questions[currentQuestion - 1];
     const answer = answers[question.id];
 
-    if (!answer) return false;
+    // Check for undefined/null explicitly (0 is a valid answer)
+    if (answer === undefined || answer === null) return false;
 
     if (question.type === "checkbox") {
       const arrayAnswer = answer as string[];
@@ -134,9 +136,10 @@ export default function Assessment() {
   }, [answers]);
 
   // After email submission, show results
-  const handleEmailSubmit = useCallback((email: string, name: string) => {
+  const handleEmailSubmit = useCallback((email: string, name: string, country: string) => {
     setUserEmail(email);
     setUserName(name);
+    setUserCountry(country);
 
     // In a real app, you'd send data to backend here
     // For now, just save to localStorage and show results
@@ -146,6 +149,7 @@ export default function Assessment() {
         JSON.stringify({
           email,
           name,
+          country,
           answers,
           profile,
           timestamp: Date.now(),
@@ -194,7 +198,7 @@ export default function Assessment() {
       case "email":
         return "Casi listo";
       case "results":
-        return "Tu Roadmap";
+        return "Tu roadmap";
       default:
         return "";
     }
