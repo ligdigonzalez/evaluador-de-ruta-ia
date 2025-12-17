@@ -62,10 +62,19 @@ export function FirstStepCard({ firstStep }: FirstStepCardProps) {
       </div>
 
       {/* CTA Button */}
-      <Button className="btn-accent w-full h-14 text-lg font-semibold gap-2">
-        <Play className="w-5 h-5" />
-        Ver Video Gratis
-      </Button>
+      {firstStep.url ? (
+        <a href={firstStep.url} target="_blank" rel="noopener noreferrer" className="block">
+          <Button className="btn-accent w-full h-14 text-lg font-semibold gap-2">
+            <Play className="w-5 h-5" />
+            Ver video gratis
+          </Button>
+        </a>
+      ) : (
+        <Button className="btn-accent w-full h-14 text-lg font-semibold gap-2">
+          <Play className="w-5 h-5" />
+          Ver video gratis
+        </Button>
+      )}
     </div>
   );
 }

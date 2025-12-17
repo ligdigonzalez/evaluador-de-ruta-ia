@@ -75,9 +75,9 @@ export const roadmaps: Record<string, Roadmap> = {
           "Adaptar tono y estilo",
         ],
         resources: [
-          { title: "Desmitificando la IA: Guía Práctica para Tu Negocio", duration: "15 min" },
-          { title: "Las 5 etapas para dominar la IA: De novato a experto", duration: "20 min" },
-          { title: "La guía completa de asistentes de IA para profesionales", duration: "14 min" },
+          { title: "Desmitificando la IA: Guía práctica para tu negocio", duration: "15 min", url: "https://youtu.be/Krxtx_QAKMo?si=W-KG3dHTAr3ZYQrT" },
+          { title: "Las 5 etapas para dominar la IA: De novato a experto", duration: "20 min", url: "https://youtu.be/KOECmIq_m8E?si=a6bsdUIVWdb__BDi" },
+          { title: "La guía completa de asistentes de IA para profesionales", duration: "14 min", url: "https://youtu.be/-WCVX12gUlw?si=m4Y19EHJGkZX3EYv" },
         ],
         project: "Crea una semana completa de contenido para redes sociales usando solo IA. Incluye: 3 posts de LinkedIn, 5 tweets, y 2 ideas de newsletter.",
         estimatedTime: "6-10 horas",
@@ -94,9 +94,9 @@ export const roadmaps: Record<string, Roadmap> = {
           "Optimizar para cada plataforma",
         ],
         resources: [
-          { title: "Asistentes de IA para crear newsletters perfectos", duration: "18 min" },
-          { title: "Construyendo un escritor de Newsletters personalizado", duration: "22 min" },
-          { title: "Construyendo un escritor de guiones personalizado", duration: "20 min" },
+          { title: "Asistentes de IA para crear newsletters perfectos", duration: "18 min", url: "https://youtu.be/HsTWBmIyUM0?si=7LJw99kRcDVMxLpE" },
+          { title: "Construyendo un escritor de newsletters personalizado", duration: "22 min", url: "https://www.youtube.com/shorts/c78M9L7f5gQ" },
+          { title: "Construyendo un escritor de guiones personalizado", duration: "20 min", url: "https://youtube.com/shorts/h2_UUcuLCRg" },
         ],
         project: "Crea 2 asistentes personalizados: uno para posts de redes sociales y otro para newsletters. Entrena cada uno con 5-7 ejemplos de tu contenido anterior.",
         estimatedTime: "8-12 horas",
@@ -113,9 +113,9 @@ export const roadmaps: Record<string, Roadmap> = {
           "Mantener calidad con supervisión mínima",
         ],
         resources: [
-          { title: "De IA en chat a IA integrada: aumenta tu productividad", duration: "25 min" },
-          { title: "Automatización con IA: Guía para profesionales", duration: "30 min" },
-          { title: "Construyendo un Estratega de Instagram", duration: "22 min" },
+          { title: "De IA en chat a IA integrada: aumenta tu productividad", duration: "25 min", url: "https://youtu.be/3A6Et4_DkC4?si=d03OzRzxUrZDIhAX" },
+          { title: "Automatización con IA: Guía para profesionales", duration: "30 min", url: "https://youtu.be/Ltx70iMXyPs?si=uQwcRdYkQW1eifLv" },
+          { title: "Construyendo un estratega de Instagram", duration: "22 min", url: "https://youtu.be/nukA_Wu9i3E?si=D9l1hdsPWSXsrPa3" },
         ],
         project: "Crea un sistema que genere automáticamente: borrador de newsletter semanal + 5 posts de redes sociales, todo basado en un tema que tú defines al inicio de cada semana.",
         estimatedTime: "12-15 horas",
@@ -125,6 +125,7 @@ export const roadmaps: Record<string, Roadmap> = {
       video: "La guía completa de asistentes de IA para profesionales",
       duration: "14 minutos",
       action: "Después de ver el video, abre ChatGPT y crea tu primer post de LinkedIn usando IA. Tómate 30 minutos para experimentar.",
+      url: "https://youtu.be/-WCVX12gUlw?si=m4Y19EHJGkZX3EYv",
     },
     recommendedCourse: {
       name: "Asistentes de IA para freelancers",
@@ -152,9 +153,9 @@ export const roadmaps: Record<string, Roadmap> = {
           "Establecer límites del asistente",
         ],
         resources: [
-          { title: "La guía completa de asistentes de IA para profesionales", duration: "14 min" },
-          { title: "Las 5 etapas para dominar la IA: De novato a experto", duration: "20 min" },
-          { title: "Desmitificando la IA: Guía Práctica para Tu Negocio", duration: "15 min" },
+          { title: "La guía completa de asistentes de IA para profesionales", duration: "14 min", url: "https://youtu.be/-WCVX12gUlw?si=m4Y19EHJGkZX3EYv" },
+          { title: "Las 5 etapas para dominar la IA: De novato a experto", duration: "20 min", url: "https://youtu.be/KOECmIq_m8E?si=a6bsdUIVWdb__BDi" },
+          { title: "Desmitificando la IA: Guía práctica para tu negocio", duration: "15 min", url: "https://youtu.be/Krxtx_QAKMo?si=W-KG3dHTAr3ZYQrT" },
         ],
         project: "Documenta las 10-15 preguntas más frecuentes que recibes de clientes. Agrúpalas por categoría y escribe respuestas ideales para cada una.",
         estimatedTime: "6-10 horas",
@@ -171,8 +172,8 @@ export const roadmaps: Record<string, Roadmap> = {
           "Personalizar tono y voz de marca",
         ],
         resources: [
-          { title: "AGENTES IA: el salto de automatización a autonomía total", duration: "28 min" },
-          { title: "Flujo que genera borradores de respuestas a correos", duration: "18 min" },
+          { title: "AGENTES IA: el salto de automatización a autonomía total", duration: "28 min", url: "https://youtu.be/en8sHpjUvNs?si=U5Mh7lmPzB1x60fy" },
+          { title: "Flujo que genera borradores de respuestas a correos", duration: "18 min", url: "https://youtu.be/pxtMVOuCics?si=-NAq5V4UAaqagDEe" },
         ],
         project: "Crea un asistente que pueda responder correctamente al menos 5 de tus preguntas frecuentes. Pruébalo con 10 variaciones de cada pregunta.",
         estimatedTime: "10-15 horas",
@@ -189,17 +190,18 @@ export const roadmaps: Record<string, Roadmap> = {
           "Escalar a más casos de uso",
         ],
         resources: [
-          { title: "Domina los flujos de trabajo multiagentes", duration: "32 min" },
-          { title: "De IA en chat a IA integrada: aumenta tu productividad", duration: "25 min" },
+          { title: "Domina los flujos de trabajo multiagentes", duration: "32 min", url: "https://youtu.be/CkJ3_RDewwg?si=q589Hq70KJGNc4Bs" },
+          { title: "De IA en chat a IA integrada: aumenta tu productividad", duration: "25 min", url: "https://youtu.be/3A6Et4_DkC4?si=d03OzRzxUrZDIhAX" },
         ],
         project: "Integra tu asistente con al menos un canal real (WhatsApp o formulario web). Déjalo responder clientes reales por 1 semana mientras monitoreas.",
         estimatedTime: "12-18 horas",
       },
     ],
     firstStep: {
-      video: "Desmitificando la IA: Guía Práctica para Tu Negocio",
+      video: "Desmitificando la IA: Guía práctica para tu negocio",
       duration: "15 minutos",
       action: "Después del video, abre un documento y escribe las 10 preguntas más frecuentes que recibes de clientes. Este será el fundamento de tu asistente.",
+      url: "https://youtu.be/Krxtx_QAKMo?si=W-KG3dHTAr3ZYQrT",
     },
     recommendedCourse: {
       name: "Tu primer asistente de atención al cliente con IA",
@@ -227,9 +229,9 @@ export const roadmaps: Record<string, Roadmap> = {
           "Síntesis de información compleja",
         ],
         resources: [
-          { title: "Automatización con IA: Guía para profesionales", duration: "30 min" },
-          { title: "De IA en chat a IA integrada: aumenta tu productividad", duration: "25 min" },
-          { title: "Las 5 etapas para dominar la IA (etapas 3-4)", duration: "20 min" },
+          { title: "Automatización con IA: Guía para profesionales", duration: "30 min", url: "https://youtu.be/Ltx70iMXyPs?si=uQwcRdYkQW1eifLv" },
+          { title: "De IA en chat a IA integrada: aumenta tu productividad", duration: "25 min", url: "https://youtu.be/3A6Et4_DkC4?si=d03OzRzxUrZDIhAX" },
+          { title: "Las 5 etapas para dominar la IA (etapas 3-4)", duration: "20 min", url: "https://youtu.be/KOECmIq_m8E?si=a6bsdUIVWdb__BDi" },
         ],
         project: "Identifica 3 tareas repetitivas en tu trabajo. Crea prompts o pequeñas automatizaciones para cada una. Documenta el tiempo ahorrado.",
         estimatedTime: "6-10 horas",
@@ -246,9 +248,9 @@ export const roadmaps: Record<string, Roadmap> = {
           "Documentar procesos complejos",
         ],
         resources: [
-          { title: "Construyendo un generador de documentos profesionales (SOP)", duration: "20 min" },
-          { title: "Construyendo un generador de propuestas ganadoras", duration: "22 min" },
-          { title: "Construyendo un generador de correos fríos", duration: "18 min" },
+          { title: "Construyendo un generador de documentos profesionales (SOP)", duration: "20 min", url: "https://youtu.be/Ii8y9P-WaP8?si=VyrSgBtgPLjH5wIR" },
+          { title: "Construyendo un generador de propuestas ganadoras", duration: "22 min", url: "https://youtu.be/_4MM7Ty4kt4?si=FkeQpl3SVJlwqEyX" },
+          { title: "Construyendo un generador de correos fríos", duration: "18 min", url: "https://youtu.be/pxtMVOuCics?si=deH2TQWek9foP8n0" },
         ],
         project: "Crea 3 documentos profesionales con asistentes de IA: 1 SOP de un proceso de tu área, 1 reporte mensual, y 1 propuesta interna.",
         estimatedTime: "8-12 horas",
@@ -265,8 +267,8 @@ export const roadmaps: Record<string, Roadmap> = {
           "Liderar implementación de IA",
         ],
         resources: [
-          { title: "Construyendo un Estratega de Negocio", duration: "25 min" },
-          { title: "AGENTES IA: el salto de automatización a autonomía total", duration: "28 min" },
+          { title: "Construyendo un estratega de negocio", duration: "25 min", url: "https://youtu.be/sHbdPUXkjcQ?si=1DJT7R1KaYY10aLF" },
+          { title: "AGENTES IA: el salto de automatización a autonomía total", duration: "28 min", url: "https://youtu.be/en8sHpjUvNs?si=U5Mh7lmPzB1x60fy" },
         ],
         project: "Crea presentación profesional con: 3 casos de uso de IA para tu departamento, ROI estimado, propuesta de piloto de 90 días.",
         estimatedTime: "10-15 horas",
@@ -276,6 +278,7 @@ export const roadmaps: Record<string, Roadmap> = {
       video: "Las 5 etapas para dominar la IA: De novato a experto",
       duration: "20 minutos",
       action: "Identifica 3 tareas repetitivas en tu trabajo de esta semana. Escríbelas y estima cuántas horas por semana gastas en cada una.",
+      url: "https://youtu.be/KOECmIq_m8E?si=a6bsdUIVWdb__BDi",
     },
     recommendedCourse: {
       name: "IA práctica para destacar en tu trabajo",
@@ -303,10 +306,10 @@ export const roadmaps: Record<string, Roadmap> = {
           "Evaluar tu nivel de interés en cada área",
         ],
         resources: [
-          { title: "Desmitificando la IA: Guía Práctica para Tu Negocio", duration: "15 min" },
-          { title: "Las 5 etapas para dominar la IA: De novato a experto", duration: "20 min" },
-          { title: "La guía completa de asistentes de IA para profesionales", duration: "14 min" },
-          { title: "Serie completa: Inteligencia Artificial que trabaja para ti (8 videos)", duration: "~3 horas" },
+          { title: "Desmitificando la IA: Guía práctica para tu negocio", duration: "15 min", url: "https://youtu.be/Krxtx_QAKMo?si=W-KG3dHTAr3ZYQrT" },
+          { title: "Las 5 etapas para dominar la IA: De novato a experto", duration: "20 min", url: "https://youtu.be/KOECmIq_m8E?si=a6bsdUIVWdb__BDi" },
+          { title: "La guía completa de asistentes de IA para profesionales", duration: "14 min", url: "https://youtu.be/-WCVX12gUlw?si=m4Y19EHJGkZX3EYv" },
+          { title: "Serie completa: Inteligencia artificial que trabaja para ti (8 videos)", duration: "~3 horas", url: "https://youtube.com/playlist?list=PLJjOveEiVE4C_LEjiC3hfXTbHKp2HhMaz&si=333Wm_SqRiDvLnba" },
         ],
         project: "Experimenta con ChatGPT gratis por 2-3 semanas. Prueba al menos 5 casos de uso diferentes: escritura, investigación, aprendizaje, generación de ideas, resolución de problemas.",
         estimatedTime: "8-12 horas",
@@ -323,9 +326,9 @@ export const roadmaps: Record<string, Roadmap> = {
           "Crear portfolio público",
         ],
         resources: [
-          { title: "Playlist: Inteligencia Artificial que trabaja para ti (replica 3-4 asistentes)", duration: "~2 horas" },
-          { title: "Automatización con IA: Guía para profesionales", duration: "30 min" },
-          { title: "De IA en chat a IA integrada: aumenta tu productividad", duration: "25 min" },
+          { title: "Playlist: Inteligencia artificial que trabaja para ti (replica 3-4 asistentes)", duration: "~2 horas", url: "https://youtube.com/playlist?list=PLJjOveEiVE4C_LEjiC3hfXTbHKp2HhMaz&si=333Wm_SqRiDvLnba" },
+          { title: "Automatización con IA: Guía para profesionales", duration: "30 min", url: "https://youtu.be/Ltx70iMXyPs?si=uQwcRdYkQW1eifLv" },
+          { title: "De IA en chat a IA integrada: aumenta tu productividad", duration: "25 min", url: "https://youtu.be/3A6Et4_DkC4?si=d03OzRzxUrZDIhAX" },
         ],
         project: "Crea tu 'Portfolio de IA' con 3-5 proyectos: asistente de escritura, sistema de respuestas automáticas, generador de contenido, flujo de automatización, y planificador con IA.",
         estimatedTime: "15-20 horas",
@@ -342,18 +345,19 @@ export const roadmaps: Record<string, Roadmap> = {
           "Contribuir a comunidad",
         ],
         resources: [
-          { title: "Las 5 etapas para dominar la IA (etapas 4-5)", duration: "20 min" },
-          { title: "AGENTES IA: el salto de automatización a autonomía total", duration: "28 min" },
-          { title: "Domina los flujos de trabajo multiagentes", duration: "32 min" },
+          { title: "Las 5 etapas para dominar la IA (etapas 4-5)", duration: "20 min", url: "https://youtu.be/KOECmIq_m8E?si=a6bsdUIVWdb__BDi" },
+          { title: "AGENTES IA: el salto de automatización a autonomía total", duration: "28 min", url: "https://youtu.be/en8sHpjUvNs?si=U5Mh7lmPzB1x60fy" },
+          { title: "Domina los flujos de trabajo multiagentes", duration: "32 min", url: "https://youtu.be/CkJ3_RDewwg?si=q589Hq70KJGNc4Bs" },
         ],
         project: "Proyecto capstone que combine múltiples habilidades: sistema completo de generación + programación + análisis, o chatbot completo con múltiples flujos.",
         estimatedTime: "15-25 horas",
       },
     ],
     firstStep: {
-      video: "Desmitificando la IA: Guía Práctica para Tu Negocio",
+      video: "Desmitificando la IA: Guía práctica para tu negocio",
       duration: "15 minutos",
       action: "Crea cuenta gratuita de ChatGPT (si no la tienes). Después del video, experimenta 30 minutos con 3 casos de uso que te interesen.",
+      url: "https://youtu.be/Krxtx_QAKMo?si=W-KG3dHTAr3ZYQrT",
     },
     recommendedCourse: {
       name: "Comunidad AprendeIA - membresía mensual",
@@ -382,9 +386,9 @@ export const defaultRoadmap: Roadmap = {
         "Desarrollar pensamiento crítico sobre outputs",
       ],
       resources: [
-        { title: "Desmitificando la IA: Guía Práctica para Tu Negocio", duration: "15 min" },
-        { title: "Las 5 etapas para dominar la IA: De novato a experto", duration: "20 min" },
-        { title: "La guía completa de asistentes de IA para profesionales", duration: "14 min" },
+        { title: "Desmitificando la IA: Guía práctica para tu negocio", duration: "15 min", url: "https://youtu.be/Krxtx_QAKMo?si=W-KG3dHTAr3ZYQrT" },
+        { title: "Las 5 etapas para dominar la IA: De novato a experto", duration: "20 min", url: "https://youtu.be/KOECmIq_m8E?si=a6bsdUIVWdb__BDi" },
+        { title: "La guía completa de asistentes de IA para profesionales", duration: "14 min", url: "https://youtu.be/-WCVX12gUlw?si=m4Y19EHJGkZX3EYv" },
       ],
       project: "Identifica 3 tareas de tu día a día y resuelve cada una usando IA. Documenta el proceso y los resultados.",
       estimatedTime: "6-10 horas",
@@ -401,8 +405,8 @@ export const defaultRoadmap: Roadmap = {
         "Integrar IA en flujos de trabajo",
       ],
       resources: [
-        { title: "Construyendo un Estratega de Negocio", duration: "25 min" },
-        { title: "Automatización con IA: Guía para profesionales", duration: "30 min" },
+        { title: "Construyendo un estratega de negocio", duration: "25 min", url: "https://youtu.be/sHbdPUXkjcQ?si=1DJT7R1KaYY10aLF" },
+        { title: "Automatización con IA: Guía para profesionales", duration: "30 min", url: "https://youtu.be/Ltx70iMXyPs?si=uQwcRdYkQW1eifLv" },
       ],
       project: "Crea 2 asistentes personalizados para las tareas que más tiempo te consumen.",
       estimatedTime: "8-12 horas",
@@ -419,8 +423,8 @@ export const defaultRoadmap: Roadmap = {
         "Escalar soluciones",
       ],
       resources: [
-        { title: "De IA en chat a IA integrada: aumenta tu productividad", duration: "25 min" },
-        { title: "AGENTES IA: el salto de automatización a autonomía total", duration: "28 min" },
+        { title: "De IA en chat a IA integrada: aumenta tu productividad", duration: "25 min", url: "https://youtu.be/3A6Et4_DkC4?si=d03OzRzxUrZDIhAX" },
+        { title: "AGENTES IA: el salto de automatización a autonomía total", duration: "28 min", url: "https://youtu.be/en8sHpjUvNs?si=U5Mh7lmPzB1x60fy" },
       ],
       project: "Crea un workflow automatizado que conecte al menos 2 herramientas y te ahorre tiempo cada semana.",
       estimatedTime: "12-15 horas",
@@ -430,6 +434,7 @@ export const defaultRoadmap: Roadmap = {
     video: "La guía completa de asistentes de IA para profesionales",
     duration: "14 minutos",
     action: "Después del video, experimenta 30 minutos con ChatGPT aplicándolo a una tarea real de tu trabajo.",
+    url: "https://youtu.be/-WCVX12gUlw?si=m4Y19EHJGkZX3EYv",
   },
   recommendedCourse: {
     name: "Curso integral de IA práctica",
@@ -438,3 +443,23 @@ export const defaultRoadmap: Roadmap = {
     description: "Programa completo que te llevará de principiante a usuario avanzado con proyectos prácticos y mentoría.",
   },
 };
+
+// Helper function to get roadmap based on user answers
+export function getRoadmap(context: string, painPoint: string): Roadmap {
+  // Map context + pain point to roadmap
+  if (context === "freelancer" && (painPoint === "contenido" || painPoint === "productividad")) {
+    return roadmaps["freelancer-contenido"];
+  }
+  if (context === "emprendedor" && (painPoint === "comunicacion" || painPoint === "productividad")) {
+    return roadmaps["emprendedor-comunicacion"];
+  }
+  if (context === "empleado") {
+    return roadmaps["empleado-productividad"];
+  }
+  if (context === "estudiante" || context === "transicion") {
+    return roadmaps["estudiante-general"];
+  }
+  
+  // Default fallback
+  return defaultRoadmap;
+}
