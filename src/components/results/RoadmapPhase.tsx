@@ -116,24 +116,42 @@ export function RoadmapPhase({ phase, isExpanded: defaultExpanded = false }: Roa
             Recursos Recomendados
           </h4>
           <div className="space-y-2">
-            {phase.resources.map((resource, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-3 p-3 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
-              >
-                <div className="w-8 h-8 rounded-full bg-destructive/10 flex items-center justify-center flex-shrink-0">
-                  <Play className="w-4 h-4 text-destructive" />
+            {phase.resources.map((resource, index) => {
+              const content = (
+                <>
+                  <div className="w-8 h-8 rounded-full bg-destructive/10 flex items-center justify-center flex-shrink-0">
+                    <Play className="w-4 h-4 text-destructive" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-medium text-foreground truncate">
+                      {resource.title}
+                    </p>
+                    {resource.duration && (
+                      <p className="text-xs text-muted-foreground">{resource.duration}</p>
+                    )}
+                  </div>
+                </>
+              );
+
+              return resource.url ? (
+                <a
+                  key={index}
+                  href={resource.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-3 rounded-lg bg-muted/50 hover:bg-muted transition-colors cursor-pointer"
+                >
+                  {content}
+                </a>
+              ) : (
+                <div
+                  key={index}
+                  className="flex items-center gap-3 p-3 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
+                >
+                  {content}
                 </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-foreground truncate">
-                    {resource.title}
-                  </p>
-                  {resource.duration && (
-                    <p className="text-xs text-muted-foreground">{resource.duration}</p>
-                  )}
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
