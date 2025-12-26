@@ -142,39 +142,31 @@ export default function Assessment() {
     setUserCountry(country);
 
     // Send data to FluentCRM webhook
-    const webhookUrl = "https://escuela.aprendeia.com/?fluentcrm=1&route=contact&hash=6e192c95-8d9a-43d8-aaca-0ff7d395e083";
+    const webhookUrl = "https://hooks.zapier.com/hooks/catch/15649538/ua7nw72/";
     
     try {
-      // Preparar datos en el formato que FluentCRM espera
-      const fluentCrmData = {
+      const zapierData = {
         email: email,
-        first_name: name,
-        tags: [profile?.level || "sin-nivel"],
-        custom_values: {
-          country: country,
-          quiz_level: profile?.level || "",
-          quiz_answers: JSON.stringify(answers),
-          quiz_date: new Date().toISOString()
-        }
+        name: name,
+        country: country,
+        nivel: profile?.level || "sin-nivel",
+        respuestas: JSON.stringify(answers),
+        fecha: new Date().toISOString()
       };
 
-      console.log("Enviando a FluentCRM:", fluentCrmData);
+      console.log("Enviando a Zapier:", zapierData);
 
-      const response = await fetch(webhookUrl, {
+      await fetch(webhookUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(fluentCrmData),
+        body: JSON.stringify(zapierData),
       });
 
-      if (response.ok) {
-        console.log("✅ Contacto enviado a FluentCRM exitosamente");
-      } else {
-        console.error("❌ Error en FluentCRM:", response.status);
-      }
+      console.log("✅ Datos enviados a Zapier exitosamente");
     } catch (error) {
-      console.error("❌ Error enviando a FluentCRM:", error);
+      console.error("❌ Error enviando a Zapier:", error);
       // Continuar al resultado aunque falle
     }
 
