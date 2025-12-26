@@ -145,32 +145,37 @@ export default function Assessment() {
     const webhookUrl = "https://escuela.aprendeia.com/?fluentcrm=1&route=contact&hash=6e192c95-8d9a-43d8-aaca-0ff7d395e083";
     
     try {
-      // Prepare data for FluentCRM
+      // Preparar datos en el formato que FluentCRM espera
       const fluentCrmData = {
         email: email,
         first_name: name,
-        country: country,
-        // Additional custom fields
-        quiz_level: profile?.level || "",
-        quiz_answers: JSON.stringify(answers),
+        tags: [profile?.level || "sin-nivel"],
+        custom_values: {
+          country: country,
+          quiz_level: profile?.level || "",
+          quiz_answers: JSON.stringify(answers),
+          quiz_date: new Date().toISOString()
+        }
       };
 
-      console.log("Sending data to FluentCRM:", fluentCrmData);
+      console.log("Enviando a FluentCRM:", fluentCrmData);
 
-      // Send to webhook (using no-cors mode to handle CORS)
-      await fetch(webhookUrl, {
+      const response = await fetch(webhookUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        mode: "no-cors",
         body: JSON.stringify(fluentCrmData),
       });
 
-      console.log("Data sent to FluentCRM successfully");
+      if (response.ok) {
+        console.log("✅ Contacto enviado a FluentCRM exitosamente");
+      } else {
+        console.error("❌ Error en FluentCRM:", response.status);
+      }
     } catch (error) {
-      console.error("Error sending data to FluentCRM:", error);
-      // Continue to results even if webhook fails
+      console.error("❌ Error enviando a FluentCRM:", error);
+      // Continuar al resultado aunque falle
     }
 
     // Also save to localStorage as backup
