@@ -135,14 +135,45 @@ export default function Assessment() {
     setStage("email");
   }, [answers]);
 
-  // After email submission, show results
-  const handleEmailSubmit = useCallback((email: string, name: string, country: string) => {
+  // After email submission, send to FluentCRM and show results
+  const handleEmailSubmit = useCallback(async (email: string, name: string, country: string) => {
     setUserEmail(email);
     setUserName(name);
     setUserCountry(country);
 
-    // In a real app, you'd send data to backend here
-    // For now, just save to localStorage and show results
+    // Send data to FluentCRM webhook
+    const webhookUrl = "https://escuela.aprendeia.com/?fluentcrm=1&route=contact&hash=6e192c95-8d9a-43d8-aaca-0ff7d395e083";
+    
+    try {
+      // Prepare data for FluentCRM
+      const fluentCrmData = {
+        email: email,
+        first_name: name,
+        country: country,
+        // Additional custom fields
+        quiz_level: profile?.level || "",
+        quiz_answers: JSON.stringify(answers),
+      };
+
+      console.log("Sending data to FluentCRM:", fluentCrmData);
+
+      // Send to webhook (using no-cors mode to handle CORS)
+      await fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        mode: "no-cors",
+        body: JSON.stringify(fluentCrmData),
+      });
+
+      console.log("Data sent to FluentCRM successfully");
+    } catch (error) {
+      console.error("Error sending data to FluentCRM:", error);
+      // Continue to results even if webhook fails
+    }
+
+    // Also save to localStorage as backup
     try {
       localStorage.setItem(
         `${STORAGE_KEY}_completed`,
